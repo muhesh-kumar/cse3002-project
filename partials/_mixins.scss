@@ -1,0 +1,4 @@
+@mixin gradientBackground {
+  background: linear-gradient(135deg, $primary-color, $white-color);
+  color: $black-color;
+}
