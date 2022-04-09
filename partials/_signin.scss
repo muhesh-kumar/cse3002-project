@@ -1,0 +1,32 @@
+.signin-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  img {
+    width: 50%;
+  }
+
+  .signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    background-color: $secondary-color-light;
+
+    h3 span {
+      border-bottom: 3px solid $dark-color;
+      border-collapse: collapse;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      background-color: $primary-color-light;
+      padding: 5px;
+      height: 2.2rem;
+      border-radius: 4px;
+    }
+  }
+}

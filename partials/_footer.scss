@@ -1,0 +1,56 @@
+footer {
+  // background-color: $black-color;
+  background-color: $dark-color;
+  color: $white-color;
+  padding-top: 6rem;
+  margin-top: 6rem;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+    font-size: 0.85rem;
+
+    a {
+      color: $white-color;
+      transition: all 400ms ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      & > h3 {
+        color: $white-color;
+      }
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      & > h3 {
+        color: $white-color;
+      }
+
+      .footer__socials {
+        gap: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba($white-color, 0.2);
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,35 @@
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  background-color: $primary-color;
+  @include gradientBackground;
+  color: $font-color-dark;
+}
+
+.container {
+  width: $container-lg;
+  margin: 0 auto;
+}
+
+.horizontal-container {
+  display: flex;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
