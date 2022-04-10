@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare | Sign In</title>
+    <link rel="stylesheet" href="../css/styles.min.css" />
+  </head>
+  <body class="signin-body">
+    <%- include("./partials/navbar.ejs") %>
+
+    <header>
+      <div class="signin-container">
+        <img src="../assets/hospital-svgrepo-com.svg" alt="" />
+        <form class="signin-form" action="">
+          <h3><span>Sign In</span></h3>
+          <div class="vertical-container">
+            <label for="email">Username</label>
+            <input type="email" />
+          </div>
+          <div class="vertical-container">
+            <label for="password">Password</label>
+            <input type="password" name="password" />
+          </div>
+          <div>
+            <input type="checkbox" name="remember-me" id="" />
+            <label for="remember-me">Remember me</label>
+          </div>
+
+          <input type="submit" value="Sign In" />
+          <p><span>Dont's have an account?</span> <a href="">Sign up</a></p>
+        </form>
+      </div>
+    </header>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
