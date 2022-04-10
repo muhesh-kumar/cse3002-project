@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat-font;
   line-height: 1.5;
   background-color: $primary-color;
   @include gradientBackground;
@@ -19,6 +19,7 @@ body {
 
 .horizontal-container {
   display: flex;
+  flex-direction: row;
 }
 
 .vertical-container {

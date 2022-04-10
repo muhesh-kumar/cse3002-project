@@ -4,7 +4,8 @@
 }
 
 @mixin cardShadow {
-  box-shadow: 0px 3px 7px -5px rgba(0, 0, 0, 75%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  // box-shadow: 0px 3px 7px -5px rgba(0, 0, 0, 75%);
 }
 
 @mixin linearGradientText {
@@ -21,24 +22,24 @@
     height: 2.4rem;
   }
 
-  input,
+  input[type='text'],
+  input[type='number'],
+  input[type='email'],
+  input[type='password'],
   textarea {
     background-color: $white-color;
-    border-bottom: 3px solid $dark-color-tint;
-    padding: 5px;
+    border-bottom: 3.5px solid $dark-color-tint;
+    padding: 10px;
     width: 350px;
-  }
 
-  textarea {
-    background-color: $white-color;
-    border-bottom: 3px solid $dark-color-tint;
-    padding: 5px;
+    font-family: $montserrat-font;
+    font-weight: 500;
   }
 
   input[type='submit'] {
     font-weight: 600;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    height: 4rem;
+    height: 3rem;
   }
 }

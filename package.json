@@ -19,6 +19,7 @@
   "homepage": "https://github.com/muhesh-kumar/cse3002-project#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
   }
 }
