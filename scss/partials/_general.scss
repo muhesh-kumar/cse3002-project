@@ -1,11 +1,11 @@
-@import "./variables";
+@import './variables';
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   background-color: $primary-color;
   @include gradientBackground;

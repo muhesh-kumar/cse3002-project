@@ -3,30 +3,38 @@
   gap: 1rem;
   justify-content: center;
 
-  img {
-    width: 50%;
-  }
-
   .signin-form {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     padding: 1.5rem;
-    border-radius: 0.8rem;
-    background-color: $secondary-color-light;
+    border-radius: 0.5rem;
+    background-color: $primary-color;
 
-    h3 span {
-      border-bottom: 3px solid $dark-color;
-      border-collapse: collapse;
+    @include cardShadow;
+
+    h3 {
+      align-self: center;
+
+      span {
+        @include linearGradientText;
+        border-bottom: 3px solid $dark-color;
+        border-collapse: collapse;
+      }
     }
 
-    input[type="email"],
-    input[type="password"],
-    input[type="submit"] {
-      background-color: $primary-color-light;
+    input[type='email'],
+    input[type='password'] {
+      background-color: $white-color;
+      border-bottom: 3px solid $dark-color-tint;
       padding: 5px;
       height: 2.2rem;
-      border-radius: 4px;
+    }
+
+    input[type='submit'] {
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
     }
   }
 }

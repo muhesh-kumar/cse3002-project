@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- include("./partials/favicon.ejs") %>
+    <title>Medicare Group of Hospitals | <%= title %></title>
+
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body class="signup-body">
+    <%- include("./partials/navbar.ejs") %>
+
+    <header class="container">
+      <form action="get" class="contact-form">
+        <div class="left-col">
+          <h1>Say Hello!</h1>
+          <div class="vertical-container">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="" />
+          </div>
+          <div class="vertical-container">
+            <label for="phone-num">Phone Number</label>
+            <input type="number" name="phone-num" id="" />
+          </div>
+          <div class="vertical-container">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="" />
+          </div>
+        </div>
+        <div class="right-col">
+          <label for="message">Message</label>
+          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <input type="submit" value="SUBMIT" class="btn" />
+        </div>
+      </form>
+    </header>
+
+    <main><%- include("./partials/chat-btn.ejs") %></main>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

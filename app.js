@@ -14,19 +14,33 @@ app.set('view engine', 'ejs');
 
 // Create and setup the routes
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    title: 'Home',
+  });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about');
+  res.render('about', {
+    title: 'About Us',
+  });
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact');
+  res.render('contact', {
+    title: 'Contact Us',
+  });
 });
 
 app.get('/signin', (req, res) => {
-  res.render('signin');
+  res.render('signin', {
+    title: 'Sign In',
+  });
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup', {
+    title: 'Sign Up',
+  });
 });
 
 // Listen to localhost:PORT
