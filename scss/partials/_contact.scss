@@ -1,0 +1,25 @@
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 2rem;
+  background-color: $primary-color;
+  border-radius: 1.5rem;
+
+  @include styledInputBoxes;
+  @include cardShadow;
+
+  input[type='submit'] {
+    font-weight: 600;
+    font-size: 1rem;
+    height: 3rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.left-col,
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

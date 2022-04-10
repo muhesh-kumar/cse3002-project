@@ -8,6 +8,10 @@ nav {
   @include gradientBackground;
   box-shadow: 0 1rem 1rem rgba($black-color, 0.1);
 
+  img {
+    opacity: 0.6;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -42,3 +46,18 @@ nav {
   //   color: $white-color;
   // }
 }
+
+// TODO: make it responsive!
+// @media screen and (max-width: 1024px) {
+//   nav {
+//     .container {
+//       button {
+//         display: inline-block;
+//         background: transparent;
+//         color: $white-color;
+//         font-size: 2rem;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }

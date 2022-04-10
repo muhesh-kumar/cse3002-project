@@ -1,7 +1,8 @@
 .btn {
-  background-color: $dark-color-tint;
-  color: $white-color;
-  font-weight: 600;
-  padding: 1rem;
-  border-radius: 0.4rem;
+  background-color: $dark-color-tint !important;
+  color: $white-color !important;
+  font-weight: 600 !important;
+  padding: 1rem !important;
+  border-radius: 0.4rem !important;
+  cursor: pointer !important;
 }

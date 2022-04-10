@@ -13,10 +13,11 @@
   <body class="signin-body">
     <%- include("./partials/navbar.ejs") %>
 
-    <header class="signin-header">
+    <header>
       <div class="signin-container">
+        <!-- <img src="assets/hospital-svgrepo-com.svg" alt="" /> -->
         <form class="signin-form" action="">
-          <h3><span>SIGN IN</span></h3>
+          <h3><span>SIGN UP</span></h3>
           <div class="vertical-container">
             <label for="email">Username</label>
             <input type="email" />
@@ -27,12 +28,11 @@
           </div>
           <div>
             <input type="checkbox" name="remember-me" id="" />
-            <label for="checkbox">Remember Me</label>
+            <label for="remember-me">Remember me</label>
           </div>
-
-          <input type="submit" value="Sign In" class="btn" />
+          <input type="submit" value="Sign Up" class="btn" />
           <p>
-            <span>Don't have an account?</span> <a href="/signup">Sign Up</a>
+            <span>Already have an account?</span> <a href="/signin">Sign In</a>
           </p>
         </form>
       </div>
@@ -41,10 +41,5 @@
     <main><%- include("./partials/chat-btn.ejs") %></main>
 
     <%- include("./partials/footer.ejs") %>
-
-    <!-- <div class="skew-box">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fuga ab
-      veniam libero possimus. Consequatur quas quia neque illo nobis!
-    </div> -->
   </body>
 </html>
