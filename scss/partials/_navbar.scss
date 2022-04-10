@@ -8,6 +8,10 @@ nav {
   @include gradientBackground;
   box-shadow: 0 1rem 1rem rgba($black-color, 0.1);
 
+  img {
+    opacity: 0.6;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;

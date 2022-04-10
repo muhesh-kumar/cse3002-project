@@ -9,10 +9,22 @@
 }
 
 @mixin linearGradientText {
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #000000 0%, #825062 100%);
-  background: -moz-linear-gradient(to right, #000000 0%, #825062 100%);
-  background: linear-gradient(to right, #000000 0%, #825062 100%);
+  background: $dark-color;
+  background: -webkit-linear-gradient(
+    to right,
+    $dark-color 0%,
+    $dark-color-tint 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    $dark-color 0%,
+    $dark-color-tint 100%
+  );
+  background: linear-gradient(to right, $dark-color 0%, $dark-color-tint 100%);
+
+  // background: -webkit-linear-gradient(to right, $dark-color 0%, #825062 100%);
+  // background: -moz-linear-gradient(to right, $dark-color 0%, #825062 100%);
+  // background: linear-gradient(to right, $dark-color 0%, #825062 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

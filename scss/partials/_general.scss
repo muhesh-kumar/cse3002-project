@@ -9,7 +9,10 @@ body {
   line-height: 1.5;
   background-color: $primary-color;
   @include gradientBackground;
-  color: $font-color-dark;
+
+  // Choose whichever looks good
+  // color: $font-color-dark;
+  color: $dark-color;
 }
 
 .container {
@@ -33,4 +36,10 @@ h3,
 h4,
 h5 {
   line-height: 1.2;
+
+  @include linearGradientText;
+
+  // Choose whichever looks good
+  // color: $font-color-dark;
+  color: $dark-color;
 }
