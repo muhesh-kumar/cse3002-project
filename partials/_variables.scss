@@ -1,3 +1,7 @@
+// COLORS:
+$black-color: #000000;
+$white-color: #ffffff;
+
 $primary-color: #f4fcd9;
 $primary-color-light: #feb6b6;
 
@@ -5,10 +9,12 @@ $secondary-color: #c0eda6;
 $secondary-color-light: #fff7bc;
 
 $dark-color: #534340;
+$dark-color-tint: #bb9981;
 
+$font-color-dark: $black-color;
+$font-color-light: rgb(29, 29, 29);
+
+// SIZES:
 $container-lg: 80%;
 
-$font-color-dark: #000000;
-$font-color-light: rgb(29, 29, 29);
-$black-color: #000000;
-$white-color: #ffffff;
+// color palette: https://colorhunt.co/palette/f4fcd9c5d8a4bb9981534340
