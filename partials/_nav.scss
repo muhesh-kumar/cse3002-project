@@ -30,5 +30,15 @@ nav {
       font-size: 0.9rem;
       color: $black-color;
     }
+
+    a.btn {
+      color: $white-color;
+      font-weight: 600;
+    }
   }
+
+  // .nav__items a.btn {
+  //   background-color: black;
+  //   color: $white-color;
+  // }
 }
