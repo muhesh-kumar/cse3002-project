@@ -49,3 +49,7 @@
 - A better UI
 - Write production level, maintable code
 - Add documentation
+- implement dark mode(take system time)
+- write unit tests
+- make the website responsive
+- improve navigation and include all redundant pages into a single page
