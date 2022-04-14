@@ -1,3 +1,5 @@
+// FIXME: remove !importants and resolve specificity issues
+
 .btn {
   background-color: $dark-color-tint !important;
   color: $white-color !important;
@@ -5,4 +7,10 @@
   padding: 1rem !important;
   border-radius: 0.4rem !important;
   cursor: pointer !important;
+
+  transition: background-color 0.5s !important;
+
+  &:hover {
+    background-color: $dark-color-tint2 !important;
+  }
 }

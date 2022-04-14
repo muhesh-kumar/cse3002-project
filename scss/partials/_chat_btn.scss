@@ -12,6 +12,11 @@
   cursor: pointer;
 
   background-color: $dark-color-tint;
-
   box-shadow: 2px 3px 17px -3px rgba(0, 0, 0, 0.75);
+
+  transition: background-color 0.5s !important;
+
+  &:hover {
+    background-color: $dark-color-tint2 !important;
+  }
 }

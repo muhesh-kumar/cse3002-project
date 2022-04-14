@@ -40,8 +40,7 @@
   input[type='password'],
   textarea {
     // TODO: choose a greyish color for background
-    // background-color: $white-color
-    background-color: rgb(142, 150, 150);
+    background-color: $white-color;
     border-bottom: 3.5px solid $dark-color-tint;
     padding: 10px;
     width: 350px;

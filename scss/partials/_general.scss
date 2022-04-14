@@ -20,6 +20,14 @@ body {
   margin: 0 auto;
 }
 
+.error-body {
+  overflow: hidden;
+  img {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 .horizontal-container {
   display: flex;
   flex-direction: row;
