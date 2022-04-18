@@ -4,8 +4,9 @@
 }
 
 @mixin cardShadow {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  // box-shadow: 0px 3px 7px -5px rgba(0, 0, 0, 75%);
+  // use any one which suits the background
+  // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 7px -5px rgba(0, 0, 0, 75%);
 }
 
 @mixin linearGradientText {
@@ -39,8 +40,9 @@
   input[type='email'],
   input[type='password'],
   textarea {
-    // TODO: choose a greyish color for background
+    // Choose the one which suits the background
     background-color: $white-color;
+    // background-color: rgb(246, 241, 241);
     border-bottom: 3.5px solid $dark-color-tint;
     padding: 10px;
     width: 350px;

@@ -1,5 +1,3 @@
-@import './variables';
-
 html {
   scroll-behavior: smooth;
 }
@@ -8,11 +6,16 @@ body {
   font-family: $montserrat-font;
   line-height: 1.5;
   background-color: $primary-color;
+  overflow-x: hidden; // to remove horizontal scroll bars
+
   @include gradientBackground;
 
-  // Choose whichever looks good
-  // color: $font-color-dark;
   color: $dark-color;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
 }
 
 .container {
