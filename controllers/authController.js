@@ -1,23 +1,17 @@
 const User = require('../models/User');
-
 const jwt = require('jsonwebtoken');
-
-// Mongoose Hooks is a special function which fires when a mongoose event happens
 
 // Handle errors
 const handleErrors = (err) => {
-  console.log('Inside Handle Errors method: ', err.message, err.code);
   let errors = { email: '', password: '' };
 
   // incorrect email
   if (err.message === 'incorrect email') {
-    console.log('here email');
     errors.email = 'that mail is not registered';
   }
 
   // incorrect password
   if (err.message === 'incorrect password') {
-    console.log('here password');
     errors.password = 'that password is incorrect';
   }
 
@@ -31,17 +25,16 @@ const handleErrors = (err) => {
   if (err.message.includes('user validation failed')) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
-      // console.log(properties);
     });
   }
 
   return errors;
 };
 
-// crate json web token
-const maxAge = 3 * 24 * 60 * 60; // (3days in seconds)
+// create json web token
+const maxAge = 7 * 24 * 60 * 60; // (7 days in seconds)
 const createToken = (id) => {
-  return jwt.sign({ id }, 'my secret', {
+  return jwt.sign({ id }, process.env.JWT_SECRET_KEY, {
     expiresIn: maxAge,
   });
 };
@@ -59,12 +52,15 @@ const signin_get = (req, res) => {
   });
 };
 
-// TODO: the below 3 controllers
 const signup_post = async (req, res) => {
   const { email, password } = req.body;
+  console.log(email, password);
 
   try {
-    const user = await User.create({ email, password });
+    // the user is a patient if he/she doesn't have a medicare(company / hospital
+    // - in this case) email id
+    const isPatient = !email.endsWith('@medicare.com');
+    const user = await User.create({ email, password, isPatient });
     const token = createToken(user._id);
 
     res.cookie('jwt', token, {
@@ -72,7 +68,6 @@ const signup_post = async (req, res) => {
       maxAge: 1000 * maxAge,
     });
 
-    // res.status(201).json(user);
     res.status(201).json({ user: user._id });
   } catch (err) {
     const errors = handleErrors(err);
@@ -97,9 +92,6 @@ const signin_post = async (req, res) => {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
   }
-
-  // console.log(email, password);
-  // res.send('user login');
 };
 
 const signout_get = (req, res) => {

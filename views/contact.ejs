@@ -14,25 +14,30 @@
     <%- include("./partials/navbar.ejs") %>
 
     <header class="container">
-      <form action="get" class="contact-form">
+      <form
+        method="POST"
+        action="send-contact-data"
+        enctype="multipart/form-data"
+        class="contact-form"
+      >
         <div class="left-col">
           <h1>Get in Touch!</h1>
           <div class="vertical-container">
             <label for="full-name">Full Name</label>
-            <input type="text" name="full-name" id="" />
+            <input type="text" name="full-name" />
           </div>
           <div class="vertical-container">
             <label for="phone-num">Phone Number</label>
-            <input type="number" name="phone-num" id="" />
+            <input type="number" name="phone-num" />
           </div>
           <div class="vertical-container">
             <label for="email">Email</label>
-            <input type="email" name="email" id="" />
+            <input type="email" name="email" />
           </div>
         </div>
         <div class="right-col">
           <label for="message">Message</label>
-          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <textarea name="message" cols="30" rows="10"></textarea>
           <input type="submit" value="Send Message" class="btn" />
         </div>
       </form>
@@ -41,5 +46,26 @@
     <main><%- include("./partials/chat-btn.ejs") %></main>
 
     <%- include("./partials/footer.ejs") %>
+
+    <script>
+      const form = document.querySelector('form');
+
+      const sendMail = (mail) => {
+        fetch('/send-contact-data', {
+          method: 'POST',
+          body: mail,
+        }).then((response) => {
+          response.json();
+        });
+      };
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const mail = new FormData(form);
+
+        sendMail(mail);
+      });
+    </script>
   </body>
 </html>

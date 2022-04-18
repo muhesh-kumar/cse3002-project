@@ -15,15 +15,17 @@
 
     <header class="signin-header">
       <div class="signin-container">
-        <form class="signin-form" action="">
+        <form class="signin-form" action="/signin">
           <h3><span>SIGN IN</span></h3>
           <div class="vertical-container">
-            <label for="email">Username</label>
-            <input type="email" />
+            <label for="email">Email</label>
+            <input type="email" name="email" />
+            <div class="email error"></div>
           </div>
           <div class="vertical-container">
             <label for="password">Password</label>
             <input type="password" name="password" />
+            <div class="password error"></div>
           </div>
           <div>
             <input type="checkbox" name="remember-me" id="" />
@@ -42,9 +44,43 @@
 
     <%- include("./partials/footer.ejs") %>
 
-    <!-- <div class="skew-box">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fuga ab
-      veniam libero possimus. Consequatur quas quia neque illo nobis!
-    </div> -->
+    <script>
+      const form = document.querySelector('form');
+      const emailError = document.querySelector('.email.error');
+      const passwordError = document.querySelector('.password.error');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // prevents page refresh
+
+        // reset errors
+        emailError.textContent = '';
+        passwordError.textContent = '';
+
+        // get the values
+        const email = form.email.value;
+        const password = form.password.value;
+
+        try {
+          const res = await fetch('/signin', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+          const data = await res.json();
+
+          console.log(data);
+          if (data.errors) {
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+          }
+          if (data.user) {
+            location.assign('/');
+          }
+        } catch (err) {
+          console.log(err);
+        }
+        // console.log(email, password);
+      });
+    </script>
   </body>
 </html>

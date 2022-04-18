@@ -19,11 +19,14 @@
   "homepage": "https://github.com/muhesh-kumar/cse3002-project#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
     "ejs": "^3.0.2",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.11",
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.7.3",
     "validator": "^13.7.0"
   }
 }
