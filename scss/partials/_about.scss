@@ -1,0 +1,55 @@
+// #about-body header {
+//   position: relative;
+//   top: 10rem;
+//   height: 100vh;
+// }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+
+  h2 {
+    font-weight: 400;
+  }
+}
+
+.card__image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.card__horizontal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+
+  .card__image-1,
+  .card__h1-2 {
+    justify-self: flex-start;
+  }
+
+  .card__image-2,
+  .card__h1-1 {
+    justify-self: flex-end;
+  }
+}
+
+.about-box-wrapper {
+  width: 100vw;
+  padding: 10px;
+  background-color: $primary-color;
+  color: white;
+}
+
+.about-box h1:first-child {
+  margin-top: 2rem;
+}
+
+.about-box h2:last-child {
+  margin-bottom: 2rem;
+}

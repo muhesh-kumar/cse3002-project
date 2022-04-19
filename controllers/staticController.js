@@ -47,8 +47,6 @@ const send_contact_data_post = (req, res) => {
       data[property] = fields[property].toString();
     });
 
-    // console.log(data);
-
     const mail = {
       from: data['full-name'],
       to: process.env.GMAIL_ID,
@@ -64,7 +62,7 @@ const send_contact_data_post = (req, res) => {
         console.log(err);
         res.status(500).send('Something went wrong.');
       } else {
-        console.log('sent');
+        console.log('mail sent successfully');
         res.status(200).send('Email successfully sent to recipient!');
       }
     });

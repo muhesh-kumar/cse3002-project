@@ -9,11 +9,53 @@
     <title>Medicare Group of Hospitals | <%= title %></title>
 
     <link rel="stylesheet" href="css/styles.min.css" />
+    
   </head>
-  <body class="signin-body">
+
+  <body id="about-body">
     <%- include("./partials/navbar.ejs") %>
 
-    <header class="container"></header>
+    <header>
+      <div class="box">
+        <div class="card__horizontal-container">
+          <div class="card__image" id="card__image-1">
+            <img src="assets/vision.jpg" />
+          </div>
+          <h1 id="card__h1-1"> 
+            Our Vision is Saving a Billion Life, and making it again Vibrant
+          </h1>
+        </div>
+        <div class="card__horizontal-container">
+          <h1 id="card__h1-2"> 
+            Our Mission is to bring modern healthcare services to all the citizens, irrespective of their location.
+          </h1>
+          <div class="card__image" id="card__image-2">
+            <img src="assets/mission.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+
+    <div class="about-box-wrapper">
+      <div class="box about-box">
+        <h1>
+          About
+        </h1>
+        <h2>
+          Medicare Group of Hospitals was established in 2020, to tackle the deadly Covid-19 situation. As many rural areas did not have the facilities to get the modern treatment to fight against the virus. 
+          As the Nation's first College related Hospital group, we came to know that many places still don't have the required medical facilities, then We started this group from a single place to a National level group.
+        </h2>
+
+        <h2>
+          MGH has emerged as India's foremost advanced and interconnected healthcare services provider and has a Reputed patient's record with always happy families.
+        </h2>
+
+        <h2>
+          As a responsible Corporate citizen, Medicare Group of Hospitals always tries to do things which for others seems impossible, and as proof we created a branch in VIT Chennai College, which is one of the most people friendly place, and named it Alpha Block..(. This will be modified according to the responses i get)
+        </h2>
+      </div>
+    </div>
 
     <main><%- include("./partials/chat-btn.ejs") %></main>
 
