@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>APPOINTMENT BOOKING</title>
+  <link rel="icon" href="seth.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+body {
+    background-image:url('https://chennai.apollohospitals.com/wp-content/uploads/2021/06/emergency-banner-min-1-602bc57e05f1c.jpg');
+    background-size:cover;
+    }
+    *{
+    margin:0px;
+    padding:5px;
+    }
+    .navbar ul{
+    list-style:none;
+    } 
+    .navbar ul li{
+    background-color:orange;
+    color:white;
+    text-decoration:none;
+    width:300px;
+    border:none;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    color:red;
+    opacity:0.9;
+    float:left;
+    font-size:22px;
+    position:relative;
+    letter-spacing:0.5px; 
+    font-family:sans-serif;
+  }
+
+
+  .navbar ul li:hover a{
+    color:#fff;
+    opacity:0.9;
+  }
+
+  .navbar ul li:hover{
+  background-color:blue;
+  }
+
+  .navbar ul ul{
+  display:none;
+  }
+  .navbar ul li:hover > ul{
+  display:block;
+  }
+  .navbar ul ul ul{
+  margin-left:300px;
+  top:0px;
+  position:absolute;
+  }
+  .seach-form{
+    margin-top:5px;
+    float:right;
+    margin-right:100px;
+  } 
+  input[type=text]{
+    padding:15px;
+    border:none;
+    font-size=16px;
+    font-family:sans-serif;
+  }
+  button{
+    float:right;
+    background:orange;
+    color:white;
+    border-radius:0 5px 5px 0;
+    cursor:pointer;
+    position:relative;
+    padding:10px;
+    font-family:sans-serif;
+    border:none;
+    font-size:16px;
+  }
+  .nav .fa{
+  background-color:#000;
+  color:#fff;
+  width:42px;
+  height;42px;
+  text-align:center;
+  line-height:42px;
+  border-radius:50%;
+  margin-right:8px;
+  }
+  .nav:hover{
+  curosor:pointer;
+  background-color:#fff;
+  color:#333;
+  }
+  .wrap {
+  width:350px;
+  margin:auto;
+  background:#00adee;
+  opacity:0.8;
+  margin-top:70px;
+  padding:5px;
+  }
+  form {
+  padding:10px;
+  font-family:arial;
+  border:1px dotted white;
+  margin:10px;
+  }
+  h2 {
+  text-align:center;
+  background:orange;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  }
+  input {
+  padding:10px;
+  margin:5px;
+  border-radius:5px;
+  border:none;
+  }
+  input[type=text],input[type=email],input[type=number],input[type=problem] {
+  width:90%;
+  }
+  input[type=submit] {
+  width:95%;
+  background:orange;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+  }
+  input[type=submit]:hover{
+  background:yellow;
+  }
+  select {
+  padding:10px;
+  width:32%;
+  border-radius:5px;
+  }
+  </style>
+</head>
+<body>
+
+
+    <div class="wrap">
+    <form>
+    <h2>BOOKING APPOINTMENT </h2>
+    <input type="First Name" name="First Name" placeholder="First Name">
+    <input type="Last Name" name="Last Name" placeholder="Last Name">
+    <input type="select your city" name="select your city" placeholder="select your city">
+    <input type="select your hospital" name="select your hospital" placeholder="select your hospital">
+    <input type="email" name="email" placeholder="your email">
+    <input type="number" name="number" placeholder="Your number">
+    <input type="What is the problem" name="What is the problem" placeholder="What is the problem"><br>
+    <span style="font-size:18px;">SELECT DATE</span>
+    <br>
+    <select name="month">
+    <option>Month</option>
+    <option value ="january">january</option>
+    <option value ="februray">februray</option>
+    <option value ="march">march</option>
+    <option value ="april">april</option>
+    <option value ="may">may</option>
+    <option value ="june">june</option>
+    <option value ="july">july</option>
+    <option value ="august">august</option>
+    <option value ="september">september</option>
+    <option value ="october">october</option>
+    <option value ="november">november</option>
+    <option value ="december">december</option>
+    </select>
+
+    <select name="Day">
+    <option>Day</option>
+    <option value ="2018">2018</option>
+    <option value ="2019">2019</option>
+    <option value ="2019">2019</option>
+    <option value ="2020">2020</option>
+    </select>
+    <select name="year">
+    <option>year</option>
+    <option value ="1">1</option>
+    <option value ="2">2</option>
+    <option value ="3">3</option>
+    <option value ="4">4</option>
+    <option value ="5">5</option>
+    <option value ="6">6</option>
+    <option value ="7">7</option>
+    <option value ="8">8</option>
+    <option value ="9">9</option>
+    <option value ="10">10</option>
+    <option value ="11">11</option>
+    <option value ="12">12</option>
+    <option value ="13">13</option>
+    <option value ="14">14</option>
+    <option value ="15">15</option>
+    <option value ="16">16</option>
+    <option value ="17">17</option>
+    <option value ="18">19</option>
+    <option value ="20">20</option>
+    <option value ="21">21</option>
+    <option value ="22">22</option>
+    <option value ="23">23</option>
+    <option value ="24">25</option>
+    <option value ="26">27</option>
+    <option value ="28">28</option>
+    <option value ="29">29</option>
+    <option value ="30">30</option>
+    <option value ="31">31</option>
+    </select>
+    <br>
+    <input type ="radio" name ="male" value="male">Male
+    <input type ="radio" name ="female" value="female">Female
+    <br>
+    <input type="checkbox"> I Agree To The Terms of Use
+    <br>
+    <input type ="submit" value="Submit Now">
+</body>
+</html>
