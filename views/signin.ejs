@@ -60,6 +60,8 @@
         const email = form.email.value;
         const password = form.password.value;
 
+        const isPatient = !email.endsWith('@medicare.com');
+
         try {
           const res = await fetch('/signin', {
             method: 'POST',
@@ -74,7 +76,8 @@
             passwordError.textContent = data.errors.password;
           }
           if (data.user) {
-            location.assign('/');
+            const newUrl = isPatient ? '/patient' : '/doctor';
+            location.assign(newUrl);
           }
         } catch (err) {
           console.log(err);

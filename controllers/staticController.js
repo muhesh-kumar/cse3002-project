@@ -69,4 +69,27 @@ const send_contact_data_post = (req, res) => {
   });
 };
 
-module.exports = { home_get, about_get, contact_get, send_contact_data_post };
+const doctor_get = (req, res) => {
+  res.render('doctor');
+};
+
+const patient_get = (req, res) => {
+  res.render('patient');
+};
+const final_payment_get = (req, res) => {
+  res.render('final-payment');
+};
+const contact_consultancy_get = (req, res) => {
+  res.render('contact-consultancy');
+};
+
+module.exports = {
+  home_get,
+  about_get,
+  contact_get,
+  send_contact_data_post,
+  doctor_get,
+  patient_get,
+  final_payment_get,
+  contact_consultancy_get,
+};

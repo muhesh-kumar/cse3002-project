@@ -34,7 +34,8 @@ mongoose
   )
   .catch((err) => console.log(err));
 
-app.get('*', checkUser);
+// app.get('*', checkUser);
+// app.post('*', checkUser);
 app.use(staticRoutes);
 app.use(authRoutes);
 

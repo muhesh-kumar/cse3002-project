@@ -22,19 +22,24 @@ const requireAuth = (req, res, next) => {
 };
 
 // check current user (to validate any request sent to the server - check if the request is actually sent by an existing user or not)
-const checkUser = (req, res, next) => {
+const checkDoctor = (req, res, next) => {
   const token = req.cookies.jwt;
 
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, decodedToken) => {
       if (err) {
-        // console.log(err.message);
+        console.log(err.message);
         res.locals.user = null;
         next();
       } else {
-        // console.log(decodedToken);
         let user = await User.findById(decodedToken.id);
         res.locals.user = user;
+        const isDoctor = !user.isPatient;
+        if (!isDoctor) {
+          res.locals.user = null;
+          res.redirect('/signin');
+          console.log('Only Doctors can view this route');
+        }
         next();
       }
     });
@@ -44,4 +49,30 @@ const checkUser = (req, res, next) => {
   }
 };
 
-module.exports = { requireAuth, checkUser };
+const checkPatient = (req, res, next) => {
+  const token = req.cookies.jwt;
+
+  if (token) {
+    jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, decodedToken) => {
+      if (err) {
+        console.log(err.message);
+        res.locals.user = null;
+        next();
+      } else {
+        let user = await User.findById(decodedToken.id);
+        res.locals.user = user;
+        if (!user.isPatient) {
+          res.locals.user = null;
+          res.redirect('/signin');
+          console.log('Only Patients can view this route');
+        }
+        next();
+      }
+    });
+  } else {
+    res.locals.user = null;
+    next();
+  }
+};
+
+module.exports = { requireAuth, checkDoctor, checkPatient };
