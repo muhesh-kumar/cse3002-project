@@ -1,0 +1,120 @@
+:root {
+  --secondary-color: #c0eda6;
+  --dark-color: #534340;
+  --primary-color: #f4fcd9;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--primary-color);
+}
+
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+.nav-back {
+  background: var(--secondary-color);
+  color: #fff;
+}
+.navbar-brand {
+  color: #000;
+}
+.navbar-brand:hover {
+  color: #fff;
+}
+.nav-link {
+  color: #000;
+}
+.nav-link:hover {
+  color: #fff;
+}
+.navbar-toggler {
+  outline: none !important;
+}
+
+/*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: url('./images/hero.jpg') center center;
+  background-size: cover;
+  position: relative;
+  color: var(--dark-color);
+}
+
+#hero .container {
+  padding-top: 80px;
+}
+
+#hero:before {
+  content: '';
+  color: var(--dark-color);
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.main-btn {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.main-btn:hover {
+  /* background: #11dbcf; */
+  border: 2px solid #11dbcf;
+  text-decoration: none;
+  color: #fff;
+}
+.form-group .btn-form {
+  /* background: #11dbcf; */
+  border: 2px solid #11dbcf;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--dark-color);
+  color: white;
+}
+.footer .btn-back {
+  /* background: #fff; */
+  color: #00d9ff;
+}
+.footer .text {
+  color: white;
+}

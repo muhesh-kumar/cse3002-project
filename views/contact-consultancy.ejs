@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8">
       <title>Contact us</title>
-      <link rel="stylesheet" href="css/contact-constultancy.css">
+      <link rel="stylesheet" href="css/contact-consultancy.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -11,11 +11,11 @@
       <div class="text">
          Contact us for Consultancy
       </div>
-      <form action="#">
+      <form action="#" method="POST">
          <div class="form-row">
             <div class="input-data">
                <!--Added required thingy-->
-               <input type="text" required>
+               <input name="full-name" type="text" required>
                <div class="underline"></div>
                <label for="">First Name</label>
             </div>
@@ -27,19 +27,19 @@
          </div>
          <div class="form-row">
             <div class="input-data">
-               <input type="text" required>
+               <input name="email" type="email" required>
                <div class="underline"></div>
                <label for="">Email Address</label>
             </div>
             <div class="input-data">
-               <input type="text" required>
+               <input name="phone-num" type="text" required>
                <div class="underline"></div>
                <label for="">Phone Number</label>
             </div>
          </div>
          <div class="form-row">
          <div class="input-data textarea">
-            <textarea rows="8" cols="80" required></textarea>
+            <textarea name="message" rows="8" cols="80" required></textarea>
             <br />
             <div class="underline"></div>
             <label for="">Write your problem(s)/what's happening to you</label>
@@ -57,4 +57,26 @@
             </div>
       </form>
       </div>
+      
+    <script>
+      const form = document.querySelector('form');
+
+      const sendMail = (mail) => {
+        fetch('/send-contact-data', {
+          method: 'POST',
+          body: mail,
+        }).then((response) => {
+          response.json();
+        });
+      };
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const mail = new FormData(form);
+
+        sendMail(mail);
+      });
+    </script>
+
    </body>

@@ -1,3 +1,4 @@
+const Appointment = require('../models/Appointment');
 const multiparty = require('multiparty');
 const nodemailer = require('nodemailer');
 
@@ -69,6 +70,42 @@ const send_contact_data_post = (req, res) => {
   });
 };
 
+const book_appointment_get = (req, res) => {
+  res.render('book-appointment');
+};
+
+const confirm_appointment_post = async (req, res) => {
+  const { fullName, phoneNum, date, time, symptoms } = req.body;
+  console.log(fullName, phoneNum, date, time, symptoms);
+
+  try {
+    // the user is a patient if he/she doesn't have a medicare(company / hospital
+    // - in this case) email id
+    // const isPatient = !email.endsWith('@medicare.com');
+    // const user = await User.create({ email, password, isPatient });
+    const appointment = await Appointment.create({
+      fullName,
+      phoneNum,
+      date,
+      time,
+      symptoms,
+    });
+    const token = createToken(user._id);
+    console.log('Appointment Confirmed!');
+
+    // res.cookie('jwt', token, {
+    //   httpOnly: true,
+    //   maxAge: 1000 * maxAge,
+    // });
+
+    res.status(201).json({ user: user._id });
+  } catch (err) {
+    // throw err;
+    // const errors = handleErrors(err);
+    res.status(400).send('Error');
+  }
+};
+
 const doctor_get = (req, res) => {
   res.render('doctor');
 };
@@ -76,11 +113,19 @@ const doctor_get = (req, res) => {
 const patient_get = (req, res) => {
   res.render('patient');
 };
+
 const final_payment_get = (req, res) => {
   res.render('final-payment');
 };
+
 const contact_consultancy_get = (req, res) => {
   res.render('contact-consultancy');
+};
+
+const chat_get = (req, res) => {
+  res.render('chat', {
+    title: 'Chat',
+  });
 };
 
 module.exports = {
@@ -88,8 +133,11 @@ module.exports = {
   about_get,
   contact_get,
   send_contact_data_post,
+  book_appointment_get,
+  confirm_appointment_post,
   doctor_get,
   patient_get,
   final_payment_get,
   contact_consultancy_get,
+  chat_get,
 };

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- include("./partials/favicon.ejs") %>
+
+    <title>Medicare Group of Hospitals | <%= title %></title>
+
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <header>
+      <div class="container">
+        <div class="header__content">
+
+        <div id="after-login" style="display:none">
+            <h1 id="me"></h1>
+            <div id="user-list" class="user-list"></div>
+        </div>
+
+          <!-- <h1>Complete Health Care Solutions for Everyone</h1>
+          <p>
+            We at Medicare are a group of Hospitals where our Physicians,
+            hospitals and communities working together to help you live better.
+            Excellence in Healthcare every day.
+          </p>
+          <a href="" class="btn">Book Appointment</a>
+        </div>
+        <div class="header__image">
+          <img src="assets/header.jpg" alt="Header Image" />
+        </div> -->
+
+        <script src="/node_modules/socket.io/client-dist/socket.io.min.js"></script>
+        <script>
+            const socket = io({transports: ['websocket']}); 
+        </script>
+        <script src="">
+
+        </script>
+      </div>
+    </header>
+
+    <%- include("./partials/footer.ejs")%>
+  </body>
+</html>

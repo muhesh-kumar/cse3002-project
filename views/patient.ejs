@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="css/patient.css" />
+  <!-- <link rel="stylesheet" href="css/styles.min.css" /> -->
 
   <script
     src="https://kit.fontawesome.com/a076d05399.js"
@@ -7,6 +8,8 @@
   ></script>
 </head>
 <body>
+  <!-- <%- include("./partials/navbar.ejs") %> -->
+
   <div class="main-container">
     <!-- LEFT-CONTAINER -->
     <div class="left-container container">
@@ -15,6 +18,12 @@
         <h2 class="titular">MENU</h2>
         <ul class="menu-box-menu">
           <li>
+            <a class="menu-box-tab" href="/"
+              ><span class="icon entypo-calendar scnd-font-color"></span>Home
+              <div class="menu-box-number"></div
+            ></a>
+          </li>
+          <li>
             <a class="menu-box-tab" href="#6"
               ><span class="icon fontawesome-envelope scnd-font-color"></span
               >Profile
@@ -22,25 +31,20 @@
             ></a>
           </li>
           <li>
-            <a class="menu-box-tab" href="#8"
-              ><span class="icon entypo-cog scnd-font-color"></span>Settings
+            <a class="menu-box-tab" href="/contact-consultancy"
+              ><span class="icon entypo-cog scnd-font-color"></span>Contact
+              Consultancy
               <div class="menu-box-number"></div
             ></a>
           </li>
           <li>
-            <a class="menu-box-tab" href="#10"
-              ><span class="icon entypo-calendar scnd-font-color"></span>Address
-              <div class="menu-box-number"></div
-            ></a>
-          </li>
-          <li>
-            <a class="menu-box-tab" href="#12"
+            <a class="menu-box-tab" href="/final-payment"
               ><span class="icon entypo-paper-plane scnd-font-color"></span
               >Payments</a
             >
           </li>
           <li>
-            <a class="menu-box-tab" href="#13"
+            <a class="menu-box-tab" href="/book-appointment"
               ><sapn class="icon entypo-chart-line scnd-font-color"></sapn
               >Appointments</a
             >
@@ -63,21 +67,21 @@
             src="https://static.vecteezy.com/system/resources/previews/002/165/145/original/woman-patient-during-coronavirus-vaccine-injection-free-vector.jpg"
           />
         </div>
-        <h1 class="user-name">*INSERT PATIENT NAME HERE*</h1>
+        <h1 class="user-name">Siddharth</h1>
 
         <table name="Ad_smthng" style="width: 100%; color: white">
           <tr>
             <th>Address</th>
-            <td align="center">Height</td>
+            <td align="center">Height: 180cm</td>
             <td></td>
           </tr>
           <tr>
-            <td rowspan="2">*Enter Address here*</td>
-            <td align="center">Weight</td>
+            <td rowspan="2">123 abc st, C.A, USA</td>
+            <td align="center">Weight: 88kg</td>
             <td></td>
           </tr>
           <tr>
-            <td align="center">Heart Rate</td>
+            <td align="center">Heart Rate: 70bps</td>
             <td></td>
           </tr>
         </table>
@@ -88,11 +92,11 @@
     <div class="right-container container">
       <div class="loading block">
         <!-- LOADING (RIGHT-CONTAINER) -->
-        <p>BOP level</p>
+        <p>Blood Pressure level</p>
         <div class="progress-bar bop"></div>
 
         <p class="percentage">61<sup>%</sup></p>
-        <p>Syon</p>
+        <p>Diabetes Level</p>
         <div class="progress-bar syon"></div>
 
         <p class="percentage">54<sup>%</sup></p>

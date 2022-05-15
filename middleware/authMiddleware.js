@@ -1,9 +1,11 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const Appointment = require('../models/Appointment');
 
 // protect routes using this middleware (basically add this middleware as a handler to those routes which need protection i.e., authentication)
 const requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
+  console.log(token);
 
   // check json web token exists and is verified
   if (token) {

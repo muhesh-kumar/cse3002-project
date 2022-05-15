@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+// const io = require('socket.io')(http);
 
 // Routes
 const staticRoutes = require('./routes/staticRoutes');
